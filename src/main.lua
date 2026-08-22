@@ -2,8 +2,15 @@
 -- FS25 Farm Tablet  v2.1.0.0  (complete overhaul)
 -- Author: TisonK
 -- =========================================================
-local modDirectory = g_currentModDirectory
-local modName      = g_currentModName
+-- Hot-reload latch (FuelCosts reference): g_currentModDirectory and
+-- g_currentModName are nil on a live re-source, so they are latched into
+-- module globals on first load, with a g_modsDirectory loose-folder fallback.
+FarmTabletdairyModDirectory = FarmTabletdairyModDirectory
+    or g_currentModDirectory
+    or (g_modsDirectory ~= nil and (g_modsDirectory .. "FS25_FarmTablet-dairy/") or nil)
+FarmTabletdairyModName = FarmTabletdairyModName or g_currentModName or "FS25_FarmTablet-dairy"
+local modDirectory = FarmTabletdairyModDirectory
+local modName      = FarmTabletdairyModName
 
 -- Core
 source(modDirectory .. "src/core/Constants.lua")

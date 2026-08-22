@@ -5,7 +5,7 @@
 -- =========================================================
 ---@class Settings
 
-Settings = {}
+Settings = Settings or {}
 local Settings_mt = Class(Settings)
 
 -- Startup app migration helper

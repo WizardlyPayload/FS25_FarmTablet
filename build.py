@@ -18,9 +18,9 @@ ZIP_PATH = MOD_DIR / f"{MOD_NAME}.zip"
 # Windows default mods path
 MODS_DIR = Path.home() / "Documents" / "My Games" / "FarmingSimulator2025" / "mods"
 
-EXCLUDE_DIRS = {".git", ".claude", ".github", "__MACOSX", "tools", ".vscode"}
+EXCLUDE_DIRS = {".git", ".claude", ".github", "__MACOSX", "tools", ".vscode", ".local"}
 EXCLUDE_EXTS = {".sh", ".py", ".md", ".DS_Store", ".zip"}
-EXCLUDE_FILES = {".gitignore", "icon_source.png"}
+EXCLUDE_FILES = {".gitignore", "icon_source.png", ".gitattributes"}
 
 def build_zip():
     print(f"============================================")

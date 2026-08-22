@@ -9,7 +9,7 @@
 --     becomes the full screen in APP state.
 -- =========================================================
 ---@class FarmTabletUI
-FarmTabletUI = {}
+FarmTabletUI = FarmTabletUI or {}
 local FarmTabletUI_mt = Class(FarmTabletUI)
 
 -- ── Frame / layout constants (reference px @ FT.REF_W x FT.REF_H) ──

@@ -8,7 +8,7 @@
 ---
 --- The old scan symbols are deliberately not quoted anywhere in this file, so a
 --- plain search for them across the packed mod comes back empty.
-InputHandler = {}
+InputHandler = InputHandler or {}
 local InputHandler_mt = Class(InputHandler)
 
 --- Must match the <action name=...> in modDesc.xml.

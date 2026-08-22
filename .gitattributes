@@ -1,0 +1,9 @@
+# Normalize text to LF in the repo; worktree stays native (Windows CRLF).
+* text=auto
+
+# Force binary files to stay as-is
+*.png binary
+*.jpg binary
+*.ico binary
+*.zip binary
+*.dds binary
